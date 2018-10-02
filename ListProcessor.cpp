@@ -55,6 +55,15 @@ int main()
 	cout << "sum of horses : " << horses.sum << endl;
 	cout << "pigs list  :  " << pigs << endl << endl;
 	cout << "sum of pigs : " << pigs.sum << endl;
+	
+	cows.insertAsLast(2.45);
+	pigs.insertAsLast(3.24);
+	cout << "cows list  :  " << cows << endl;
+	cout << "pigs list  :  " << pigs << endl << endl;
+	cout << "number of cows	:	" << cows.size() << endl;
+	cout << "sum of cows:	" << cows.sum() << endl;
+	cout << "number of pigs	:	" << pigs.size() << endl;
+	cout << "sum of pigs	:	" << pigs.sum() << endl;
 
 	cout << "End of code" << endl;
 
