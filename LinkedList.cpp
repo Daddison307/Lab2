@@ -67,10 +67,22 @@ double List::removeFirst()
 
 void List::insertAsLast(double x)
 {
-	Node * pointer = first_;
-	while (pointer != NULL)
+	Node * tempPtr = first_;
+	Node * last = new Node(x);
+	Node * secondLast = tempPtr;
+	if (tempPtr == NULL)
 	{
-		pointer = pointer->next_;
+		first_ = new Node(x, first_); // if nothing in the list, makes a node with value
+	}
+	else
+	{
+		tempPtr = tempPtr->next_; // moves to next pointer in the list
+		while (tempPtr != NULL)
+		{
+			secondLast = tempPtr;
+			tempPtr = tempPtr->next_; // if not last item move to next until it is.
+		}
+		secondLast->next_ = last; // when last item, change NUll to the location to the new node
 	}
 }
 
